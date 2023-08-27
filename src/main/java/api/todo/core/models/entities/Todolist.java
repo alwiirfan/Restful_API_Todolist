@@ -20,6 +20,9 @@ public class Todolist implements Serializable {
 
     private boolean status;
 
+    @ManyToOne
+    private User user;
+
     public Todolist() {
     }
 
@@ -60,5 +63,13 @@ public class Todolist implements Serializable {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
